@@ -1,0 +1,23 @@
+# Ignore VS Code settings
+.vscode/
+
+# Ignore 
+
+.DS_Store
+.file_versions
+.gitkeep
+.log
+.env
+.logs/
+.mage_temp_profiles
+.preferences.yaml
+.variables/
+__pycache__/
+docker-compose.override.yml
+logs/
+mage-ai.db
+mage_data/
+secrets/
+.pytest_cache
+minio_data/
+spark-config/

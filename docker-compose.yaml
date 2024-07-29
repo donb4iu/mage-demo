@@ -6,10 +6,10 @@ services:
     ports:
       - "6789:6789"
     volumes:
-      - .:/home/mage_code
+      - .:/home/mage-code
     environment:
-      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
-      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
+      MINIO_ACCESS_KEY: "minioadmin"
+      MINIO_SECRET_KEY: "minioadmin"
         
   
   starrocks-fe-0:
@@ -23,7 +23,7 @@ services:
         /opt/starrocks/fe_entrypoint.sh starrocks-fe-0
     environment:
       - HOST_TYPE=FQDN
-      - TZ=Asia/Shanghai
+      - TZ=America/New_York
       - AWS_ACCESS_KEY_ID=${MINIO_ACCESS_KEY}
       - AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
     ports:
@@ -49,7 +49,7 @@ services:
         /opt/starrocks/be_entrypoint.sh starrocks-fe-0
     environment:
       - HOST_TYPE=FQDN
-      - TZ=Asia/Shanghai
+      - TZ=America/New_York
     ports:
       - "8040:8040"
     depends_on:
@@ -65,9 +65,6 @@ services:
       - '9001:9001'
     volumes:
       - './minio_data:/data'
-    environment:
-      - MINIO_ROOT_USER=${MINIO_ACCESS_KEY}
-      - MINIO_ROOT_PASSWORD=${MINIO_SECRET_KEY}
     command: server --console-address ":9001" /data
   
 volumes:

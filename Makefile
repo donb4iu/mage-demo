@@ -8,7 +8,7 @@ COMPOSE_FILE = docker-compose.yaml
 build:
 	docker buildx create --use --name temp-builder
 	docker buildx build --platform linux/amd64,linux/arm64 -t $(IMAGE_NAME) .
-	buildx rm temp-builder
+	docker buildx rm temp-builder
 
 # Run the containers in the background
 up:
