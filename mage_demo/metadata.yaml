@@ -32,14 +32,14 @@ spark_config:
   # e.g., spark_jars: ['/home/path/example1.jar']
   spark_jars: [
     #delta
-    '~/documents/mage-demo/mage-demo/spark-config/hadoop-aws-3.3.4.jar', 
-    '~/documents/mage-demo/mage-demo/spark-config/aws-java-sdk-bundle-1.12.262.jar',
-    '~/documents/mage-demo/mage-demo/spark-config//delta-storage-2.4.0.jar',
-    '~/documents/mage-demo/mage-demo/spark-config/delta-core_2.12-2.4.0.jar',
+    'mage_demo/spark-config/hadoop-aws-3.3.4.jar',
+    'mage_demo/spark-config/aws-java-sdk-bundle-1.12.262.jar',
+    'mage_demo/spark-config//delta-storage-2.4.0.jar',
+    'mage_demo/spark-config/delta-core_2.12-2.4.0.jar',
     #iceberg
-    '~/documents/mage-demo/mage-demo/spark-config/bundle-2.26.15.jar',
-    '~/documents/mage-demo/mage-demo/spark-config/url-connection-client-2.26.15.jar',
-    '~/documents/mage-demo/mage-demo/spark-config/iceberg-spark-runtime-3.5_2.12-1.5.2.jar',]
+    'mage_demo/spark-config/bundle-2.26.15.jar',
+    'mage_demo/spark-config/url-connection-client-2.26.15.jar',
+    'mage_demo/spark-config/iceberg-spark-runtime-3.5_2.12-1.5.2.jar',]
   # Path where Spark is installed on worker nodes,
   # e.g. spark_home: '/usr/lib/spark'
   spark_home:
