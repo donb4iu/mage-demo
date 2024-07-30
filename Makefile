@@ -7,7 +7,7 @@ COMPOSE_FILE = docker-compose.yaml
 # Build the Docker image
 build:
 	docker buildx create --use --name temp-builder
-	docker buildx build --platform linux/amd64,linux/arm64 -t $(IMAGE_NAME) .
+	docker buildx build --platform linux/amd64,linux/arm64 -t donb4iu/$(IMAGE_NAME) --push .
 	docker buildx rm temp-builder
 
 # Run the containers in the background

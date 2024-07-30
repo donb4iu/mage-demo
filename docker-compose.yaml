@@ -1,7 +1,7 @@
 services:
   mage:
     # the name of the image in Makefile
-    image: mage_demo
+    image: donb4iu/mage_demo
     container_name: mage 
     ports:
       - "6789:6789"

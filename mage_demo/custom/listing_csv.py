@@ -2,7 +2,7 @@ from minio import Minio
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 import os
-from mage-demo.utils.spark_session_factory import get_spark_session
+from mage_demo.utils.spark_session_factory import get_spark_session
 
 # Function to stop any existing Spark session
 def stop_existing_spark_session():
@@ -40,7 +40,7 @@ if not found:
 
 @custom
 def iceberg_table_write(*args, **kwargs):
-    data_folder = "mage-demo/mage-data"  # Adjust this path according to your directory structure
+    data_folder = "mage_data"  # Adjust this path according to your directory structure
     for filename in os.listdir(data_folder):
         if filename.endswith(".csv"):
             file_path = os.path.join(data_folder, filename)
