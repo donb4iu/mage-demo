@@ -1,6 +1,7 @@
 # Ignore VS Code settings
 .vscode/
-
+# Ignore VS Code settings
+.idea/
 # Ignore 
 
 .DS_Store
@@ -20,4 +21,4 @@ mage_data/
 secrets/
 .pytest_cache
 minio_data/
-spark-config/
+spark_config/
