@@ -1,8 +1,8 @@
 FROM mageai/mageai:0.9.72
 
 
-ARG PROJECT_NAME=mage-demo #you can give your own name
-ARG MAGE_CODE_PATH=/home/mage-code
+ARG PROJECT_NAME=mage_demo #you can give your own name
+ARG MAGE_CODE_PATH=/home/mage_code
 ARG USER_CODE_PATH=${MAGE_CODE_PATH}/${PROJECT_NAME}
 
 WORKDIR ${MAGE_CODE_PATH}

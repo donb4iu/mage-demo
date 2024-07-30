@@ -1,5 +1,5 @@
 # The image name for the Docker container
-IMAGE_NAME = mage-demo
+IMAGE_NAME = mage_demo
 
 # The name of the Docker Compose file
 COMPOSE_FILE = docker-compose.yaml
@@ -35,7 +35,7 @@ browse:
 
 #create new project
 create:
-	docker run -it -p 6789:6789 -v /Users/donbuddenbaum/Documents/mage-demo:/home/src mageai/mageai \
+	docker run -it -p 6789:6789 -v /Users/donbuddenbaum/Documents/mage_demo:/home/src mageai/mageai \
   /app/run_app.sh mage start $(IMAGE_NAME)
 
 #get latest image
